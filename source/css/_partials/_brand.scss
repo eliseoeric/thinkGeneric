@@ -1,0 +1,167 @@
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+
+ @import "compass/css3/transform";
+/**
+ * `.brand` is a quick and simple way to apply your brand face and/or color to
+ * any element using a handy helper class.
+ */
+.brand{
+    font-family:$brand-face +!important;
+    color:$brand-color +!important;
+}
+.brand-face{
+    font-family:$brand-face +!important;
+}
+.brand-color,
+.brand-colour{
+    color:$brand-color +!important;
+}
+
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * `.brand` is a quick and simple way to apply your brand face and/or color to
+ * any element using a handy helper class.
+ */
+.brand{
+    font-family:$brand-face +!important;
+    color:$brand-color +!important;
+}
+.brand-face{
+    font-family:$brand-face +!important;
+}
+.brand-color,
+.brand-colour{
+    color:$brand-color +!important;
+}
+
+
+
+.heading{
+  position: relative;
+  display: inline-block;
+  font-size: 5em;
+  width: 200px;
+  font-family: 'Fjalla One', sans-serif;
+  color: #fffefe;
+
+  }
+.logo_container{
+  position: absolute;
+  margin: auto;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  
+}
+.shadow{
+   box-shadow: 10px 100px 12px -18px hsla(0,0%,0%,.1),
+    					10px 110px 20px -12px hsla(0,0%,0%,.1);
+  height: 40px;
+  width: 100px;
+  margin-right: 30px;
+  margin-bottom: 75px;
+  padding-left: 35px;
+  position: relative;
+  display: inline-block;
+  border-radius: 150px;
+  -webkit-animation-name: shadowFloat;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out; 
+  -webkit-animation-direction:alternate;
+}
+
+.wrap{
+-webkit-animation-name: bobbing;
+ -webkit-animation-duration: 3s;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-timing-function: ease-in-out;
+ -webkit-animation-direction:alternate;}
+
+.cloud{
+  height: 70px;
+  width: 70px;
+  position: relative;
+  border-radius:  150px 150px 150px 0;
+  
+  &, &:before, &:after{
+    box-shadow: inset 20px 10px 60px -32px rgba(0,0,0,0.75);
+    background: #fff;
+  }
+  
+  &:before, &:after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    bottom: 0px;
+  }
+  
+   &:before{
+    height: 45px;
+    width: 45px;
+    border-radius:  150px;
+    left: -20px;
+  }
+  
+  &:after{
+    height: 80px;
+    width: 80px;
+    border-radius:  150px 150px 150px 0;
+    right: -45px;
+    z-index: -1;
+  }
+  
+   
+}
+
+i{
+  font-size:1.2em;
+  font-style:normal;
+ 
+}
+
+
+span:after {
+	content:"_";
+	opacity: 0;
+	animation: cursor 1s infinite;
+}
+@keyframes cursor {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes bobbing {
+  from{@include transform(rotate(0deg)translate(0,0px));}
+  65%{@include transform(rotate(0deg)translate(0px, 15px));}
+  to{@include transform(rotate(0deg)translate(0,-0px));}
+}
+
+@keyframes shadowFloat{
+  
+ 100%{
+   
+box-shadow: 10px 110px 20px -18px hsla(0,0%,0%,.2),
+10px 110px 20px -12px hsla(0,0%,0%,.2);
+} 
+}
+

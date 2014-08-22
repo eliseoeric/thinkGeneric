@@ -1,0 +1,56 @@
+section[role="contact"]{
+	background: #fff;
+	.section-header{
+		padding-bottom: 0;
+	}
+
+	.form-element{
+		@include span-columns(1,1);
+		@include at-breakpoint($midSized){
+			@include span-columns(1,3);
+			@include nth-omega(3n);
+		}
+	}
+	label{
+		margin-top: 1em !important;
+		width: 100%;
+		display: block;
+	}
+	input, textarea{
+		width: 100%;
+		display: block;
+		border: none;
+		background: shade($font-color, 5);
+		color: shade($font-color, 25); 
+		border-radius: 3px;
+		@include font-size(base-size);
+		font-family: "Droid Sans", sans-serifs;
+
+	}
+	input{
+		padding: .75em .5em;
+		margin-bottom: 1em !important;
+	}
+	textarea{
+		@include span-columns(1,1);
+		margin-bottom: 2em !important;
+		min-height: 8em;
+	}
+
+	input[type="submit"]{
+		@extend .btn-blue;
+		cursor: pointer;
+		@extend %t-strong;
+	}
+}
+
+.contact-info{
+	li{
+		padding: 0 0 1em .25em;
+	}
+	i{
+		color: $base-ui-color;
+		@include font-size(h3-size);
+		padding-right: .5em;
+	}
+}

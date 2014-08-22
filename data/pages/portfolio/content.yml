@@ -1,0 +1,37 @@
+title: Our Portfolio
+
+banner: We work hard to understand our clients and address their needs.
+
+hero_text: Beautiful Design In Any Device or Browser.
+
+clients:
+  - name: Prestige Concepts
+    image: prestige-mock.png
+    imageThumb: prestige-shot.png
+    link: http://www.prestige-concepts.com
+    description: Lorem ipsum dolor sit amet, ante leo. Adipiscing nulla est, a tellus libero urna in, natoque eleifend phasellus in nunc ultrices blandit, placerat nisl mi duis facilisis. Hendrerit lobortis.</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.  
+    features: <strong>Features</strong><ul><li>Mobile Responsive</li><li>Custom Design</li><li>SEO Ready</li></ul>
+  - name: Middlebrook Pines
+    image: middlebrook-mock.png
+    imageThumb:  myco-shot.png
+    link: google.com
+    description: Lorem ipsum dolor sit amet, ante leo. Adipiscing nulla est, a tellus libero urna in, natoque eleifend phasellus in nunc ultrices blandit, placerat nisl mi duis facilisis. Hendrerit lobortis.</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+    features: <strong>Features</strong><ul><li>Mobile Responsive</li><li>Custom Design</li><li>SEO Ready</li></ul>
+  - name: Downing Management Group
+    image: dmg-mock.png
+    imageThumb:  dmg-shot.png
+    link: http://downingmarketing.com/
+    description: Lorem ipsum dolor sit amet, ante leo. Adipiscing nulla est, a tellus libero urna in, natoque eleifend phasellus in nunc ultrices blandit, placerat nisl mi duis facilisis. Hendrerit lobortis.</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+    features: <strong>Features</strong><ul><li>Mobile Responsive</li><li>Custom Design</li><li>SEO Ready</li></ul>
+  - name: Woody's Waterfront
+    image: woodys-mock.png
+    imageThumb:  woodys-shot.png
+    link: http://woodyswaterfront.com
+    description: Lorem ipsum dolor sit amet, ante leo. Adipiscing nulla est, a tellus libero urna in, natoque eleifend phasellus in nunc ultrices blandit, placerat nisl mi duis facilisis. Hendrerit lobortis.</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+    features: <strong>Features</strong><ul><li>Mobile Responsive</li><li>Custom Design</li><li>SEO Ready</li></ul>
+  - name: The Oyster Shucker
+    image: oyster-mock.png
+    imageThumb:  oyster-shot.png
+    link: http://theoysterhshucker.com
+    description: Lorem ipsum dolor sit amet, ante leo. Adipiscing nulla est, a tellus libero urna in, natoque eleifend phasellus in nunc ultrices blandit, placerat nisl mi duis facilisis. Hendrerit lobortis.</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+    features: <strong>Features</strong><ul><li>Mobile Responsive</li><li>Custom Design</li><li>SEO Ready</li></ul>

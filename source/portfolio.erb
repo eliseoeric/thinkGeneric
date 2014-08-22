@@ -1,0 +1,50 @@
+---
+title: Our Portfolio
+
+id: our-portfolio
+---
+
+<div  id="<%= current_page.data.id %>" class="portfolio s-page slidePageBackLeft">
+        <section role="<%= current_page.data.id %>">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="hero-text"><%= data.pages.portfolio.content.hero_text %></h2>
+                </div>
+                <div class="content-yield">
+                    <div clas="row">
+                        <div class="call-to-action">
+                            <div class="yield">
+                                <h3 class="call">Ready to get started?</h3>
+                                <p>Think Generic is accepting small projects at the moment. Let us help you stand out.</p>
+                            </div>
+                            <div class="action">
+                                <div class="action-btn-wrap">
+                                    <%= link_to 'Request a Quote', 'contact.html', :class=>"btn-anchor btn-orange" %>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section role="previous-work">
+            <div class="container">
+            <% data.pages.portfolio.content.clients.each do |i| %>
+               <section class="port-item">
+                <div class="port-mock">
+                    <a href="<%=i.link%>"><%=image_tag(i[:image], alt: i[:name])%></a>
+                    <div class="mock-overlay">
+                        <h3><a href="<%i.link%>"><%=i.name %></a></h3>
+                        <a href="<%i.link%>"><%=i.link %></a>
+                    </div>
+                </div>
+                <div class="port-details">
+                    <h2 class="responsive-type"><a href="#"><%= i.name %></a></h2>
+                    <p><%=i.features%></p>
+                </div>
+               </section> 
+            <% end %> 
+            </div>
+    </section>
+    </div>
+

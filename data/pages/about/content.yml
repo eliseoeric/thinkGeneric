@@ -1,0 +1,37 @@
+skills:
+- type: "Html5/Html"
+  level: "90"
+  
+- type: "CSS"
+  level: "80"
+  
+- type: "JavaScript"
+  level: "60"
+
+- type: "Python/Django"
+  level: "50"
+
+- type: "PHP"
+  level: "60"
+
+
+content: "Accelerator photo sharing business school drop out ramen hustle crush it revenue traction platforms. Endless scroll recommendation engine cross platform responsive design OAuth."
+
+teammemberintro: "Ne duo imperdiet dissentias, munere nostrud eum ut, ad facilisis appellantur est. Mel ea omnis malis. Veri reformidans ne vel, cu summo sadipscing est. Pro adhuc adipisci at, mel case lobortis ut. Pri an homero essent vidisse, vix at zril repudiare."
+
+teammember:
+- name: "Ben Broeren"
+  title: "Web Designer"
+  bio: "bio"
+  image: "200x200.gif"
+- name: "Jeremey Richards"
+  title: "Web Designer"
+  bio: "bio"
+  image: "200x200.gif"
+- name: "John Doe"
+  title: "Web Designer"
+  bio: "bio"
+  image: "200x200.gif"
+
+title: "About Us"
+ 

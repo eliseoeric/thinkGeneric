@@ -1,0 +1,86 @@
+/*------------------------------------*\
+    BASE.SCSS
+\*------------------------------------*/
+/**
+ * this is the base.scss file, it contains
+ * the important features of the site
+ * styles such as typography, clearing
+ * and general layout rules 
+ *
+ */
+
+ @import "susy";
+
+
+/*Define box-sizing*/
+
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+
+@if $global-border-box == true{
+    /**
+    * Let’s make the box model all nice, shall we...?
+    */
+    *{
+        &,
+        &:before,
+        &:after{
+            @include vendor(box-sizing, border-box);
+        }
+    }
+}
+
+
+.container {
+	@include container;
+}
+
+body{
+	font-family: $base-font-family;
+	background: url('../img/tug.png') no-repeat center center fixed;
+ 	@include vendor(background-size, cover);
+ 	// overflow-x: hidden;
+	color: $black;
+	height: 100%;
+}
+body#portal{
+	background: url('../img/bahnhof.png') no-repeat center center fixed;
+}
+
+
+
+img{
+	width: 100%;
+	display:block;
+	margin: 0 auto;
+}
+
+/* links */	
+
+a,a:visited,a:hover,a:focus{
+	
+	text-decoration: none;
+}
+
+a{
+	color: $base-ui-color;
+}
+
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+	color: inherit;
+	font-weight: inherit;
+	
+}
+
+
+
+
+
+
+
+
+
+

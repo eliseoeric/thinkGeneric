@@ -1,0 +1,144 @@
+/*------------------------------------*\
+    MIXINS.SCSS
+\*------------------------------------*/
+/**
+ * These are the various mixins that make the GenEric Framework function.
+ * 
+ * To do: 
+ * add in font size mixins
+ *	
+ */
+
+
+@mixin at-gridbreak($breakpoint){
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+
+
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+@mixin font-size($size) {
+ @if $size == "h6-size" {
+  @include adjust-font-size-to($h6-size);
+  @include adjust-leading-to($h6-size-leading);
+ }
+ @if $size == "h5-size" {
+  @include adjust-font-size-to($h5-size);
+  @include adjust-leading-to($h5-size-leading);
+ }
+ @if $size == "base-size" {
+  @include adjust-font-size-to($base-font-size);
+  @include adjust-leading-to($base-font-leading);
+ }
+ @if $size == "h3-size" {
+  @include adjust-font-size-to($h3-size);
+  @include adjust-leading-to($h3-size-leading);
+ }
+ @if $size == "h2-size" {
+  @include adjust-font-size-to($h2-size);
+  @include adjust-leading-to($h2-size-leading);
+ }
+ @if $size == "h1-size" {
+  @include adjust-font-size-to($h1-size);
+  @include adjust-leading-to($h1-size-leading);
+ }
+ @if $size == "kilo-size" {
+  @include adjust-font-size-to($kilo-size);
+  @include adjust-leading-to($kilo-size-leading);
+ }
+ @if $size == "mega-size" {
+  @include adjust-font-size-to($mega-size);
+  @include adjust-leading-to($mega-size-leading);
+ }
+ @if $size == "giga-size" {
+  @include adjust-font-size-to($giga-size);
+  @include adjust-leading-to($giga-size-leading);
+ }
+}
+
+// The responsive type size mixin needs to be recoded for a mobile first approach.
+
+
+
+@mixin responsiveTypeSize($size) {
+ @if $size == "h6-size" {
+  @include adjust-font-size-to($h6-size, $h6-size-leading);
+ }
+ @if $size == "h5-size" {
+  @include adjust-font-size-to($h6-size, $h6-size-leading);
+  @include at-breakpoint($midSized) {
+   @include adjust-font-size-to($h5-size, $h5-size-leading);
+  }
+ }
+ @if $size == "base-size" {
+  @include adjust-font-size-to($h4-size, $h4-size-leading);
+  @include at-breakpoint($midSized) {
+   @include adjust-font-size-to($h5-size, $h5-size-leading);
+  }
+ }
+ @if $size == "h3-size" {
+  @include adjust-font-size-to($base-font-size, $base-font-leading);
+  @include at-breakpoint($midSized) {
+   @include adjust-font-size-to($h3-size, $h3-size-leading);
+  }
+ }
+ @if $size == "h2-size" {
+  @include adjust-font-size-to($h3-size, $h3-size-leading);
+  @include at-breakpoint($midSized) {
+   @include adjust-font-size-to($h2-size, $h2-size-leading);
+  }
+ }
+ @if $size == "h1-size" {
+  @include adjust-font-size-to($h2-size, $h2-size-leading);
+  @include at-breakpoint($midSized) {
+   @include adjust-font-size-to($h1-size, $h1-size-leading);
+  }
+ }
+}
+
+
+
+
+
+/**
+ * Keyframe mixin. Prints keyframe with appropriate vendor
+ * prefixes.
+ *
+ *  `@include keyframes(move-the-object) {
+ * 0%   { left: 100px; }
+ * 100% { left: 200px; }
+ * }`
+ *
+ * Thanks to Josh Broton
+ * http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+ */
+
+ @mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

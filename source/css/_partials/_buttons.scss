@@ -1,0 +1,37 @@
+.btn{
+	border:none;
+	display:inline-block;
+	// padding: .75em 1em;
+	// margin-left:1em;
+	@include responsiveTypeSize(base-size);
+	@extend %t-strong;
+}
+
+.btn-anchor{
+	border:none;
+	display:inline-block;
+	padding: .75em 1em;
+	// margin-left:1em;
+	@include responsiveTypeSize(h4-size);
+	@extend %t-strong;
+}
+
+.btn-blue{
+	background: $base-ui-color;
+	color: $font-color;
+	&:hover{
+		background: shade($base-ui-color, 10);
+	}
+}
+
+.btn-orange{
+	background: $brand-color;
+	color: $font-color;
+	&:hover{
+		background: shade($brand-color, 10);
+	}
+}
+
+.btn-primary{
+	@extend .btn-blue;
+}

@@ -1,0 +1,48 @@
+
+label{
+	// margin-top: 2em !important;
+	width: 100%;
+	display: block;
+}
+input, textarea{
+	width: 100%;
+	display: block;
+	border: none;
+	background: shade($font-color, 5);
+	color: shade($font-color, 25); 
+	border-radius: 3px;
+	@include font-size(base-size);
+	font-family: "Droid Sans", sans-serifs;
+
+}
+input{
+	padding: 1em .5em;
+	// margin-bottom: 2em !important;
+}
+textarea{
+	@include span-columns(1,1);
+	margin-bottom: 2em !important;
+	min-height: 8em;
+}
+
+input[type="submit"]{
+	cursor: pointer;
+	@extend %t-strong;
+}
+
+form{
+	.third{
+		@include span-columns(1,3);
+	}
+	.two-third{
+		@include span-columns(2,3);
+	}
+	.omega{
+		@include omega;
+	}
+}
+
+.domain-search{
+	padding-left: 1em;
+	padding-right: 1em;
+}

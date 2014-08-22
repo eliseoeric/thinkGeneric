@@ -1,0 +1,5 @@
+Mobile First Responsive Design
+------------
+With more than 1.2 billion mobile user world wide, the internet is no longer limited to your desktop computer.  Over the past 5 years we have seen the rise of Responsive Web Design.  Responsive web design is a design approach that pairs the mobile development and desktop development of websites.  The design describes websites that "adapt" to the device they are being view upon.  No longer must websites be developed for a desktop seperately from a mobile device.  This means faster design and lower development costs. 
+
+We develop each website with a Mobile First design practice.  Each site is developed with mobile devices as the first consideration.  This ensure that our sites will be inherently responsive, as well as simple and inuiate on a mobile device.  No more pinching, zooming or panning to view your website's content; our solutions just work.

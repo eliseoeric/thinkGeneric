@@ -1,0 +1,307 @@
+/*------------------------------------*\
+    metro layout
+\*------------------------------------*/
+.frontpage-container{
+	// margin-bottom: 2em;
+}
+%m-contains{
+	@include at-gridbreak($metro-midSized){
+		margin-top:0;
+	}
+	overflow: visible;
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+	&:before,&:after{
+		display:table;
+		content: "";
+		line-height: 0;
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+.metro-container{
+	@extend %m-contains;
+	
+	width: 100%;
+	@include at-gridbreak($metro-midSized){
+		width: $metro-midSized;
+		margin-bottom: 0.5em;
+		
+	}
+	@include at-gridbreak($metro-standardSized){
+		width: $metro-standardSized;
+	}
+	@include at-gridbreak($largeSized){
+		width: 1170px;
+		padding-bottom: 150px;
+	}
+}
+
+.metro-row{
+	@extend %m-contains;
+	&:before, &:after{
+		display: inline;
+	}
+	@include at-gridbreak($metro-midSized){
+		&:before, &:after{
+			display: table;
+		}
+	}
+	margin-left: 0;
+}
+
+.hide{
+	display:none;
+}
+
+
+.metro-tile.mobile{
+	background: $black;
+	height: auto;
+	display:block;
+	@include at-gridbreak($metro-largeSized){
+		display:none;
+	}
+}
+.metro-tile.w3{
+	width: 363px;
+	@include at-gridbreak($metro-midSized){
+		width: 363px;
+	}
+	@include at-gridbreak($metro-standardSized){
+		width: 471px;
+	}
+	@include at-gridbreak($metro-largeSized){
+		width: 585px;
+	}
+	
+}
+
+.metro-tile.logo{
+	text-align:center;
+	// background: shade($black, 15);
+	height: auto;
+	padding-bottom: 1em;
+	@include at-gridbreak($metro-standardSized){
+		height: 157px;
+	}
+	@include at-gridbreak($metro-largeSized){
+		height: 195px;
+	}
+	background: $base-ui-color;
+	padding-top: 10px;
+	@include at-gridbreak($metro-midSized){
+
+		padding-top: 25px;
+		background: $base-ui-color;
+	}
+	
+}
+
+.tagline{
+	color:$font-color;
+}
+
+p.tagline{
+	@include font-size(h3-size);
+	line-height: 1.8em;
+}
+
+.metro-tile.w4{
+	
+	width: 242px;
+	@include at-gridbreak($metro-midSized){
+		width: 484px;
+	}
+	@include at-gridbreak($metro-standardSized){
+		width: 628px;
+	}
+	@include at-gridbreak($metro-largeSized){
+		width: 780px;
+	}
+}
+
+.metro-tile.w2{
+	width: 242px;
+	@include at-gridbreak($metro-standardSized){
+		width: 314px;
+	}
+	@include at-gridbreak($metro-largeSized){
+		width: 390px;
+	}
+	
+}
+
+.metro-tile-content.slogan{
+	width: 100%;
+	overflow:hidden;
+	padding-right:2em;
+	padding-top: 2em;
+	float:right;
+	text-align:right;
+	color: #fff;
+}
+
+.metro-tile-content.img{
+	position: relative;
+	width: 100%;
+	.apsect-box{
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		top:-4em;
+		img{
+			height: 100%;
+
+		}
+	}
+	&:before{
+		content:"";
+	    display: block;
+	    padding-top: 75%;
+	    @include at-gridbreak($metro-midSized){
+	    	padding-top: 56.25%;
+	    }
+	    
+	    @include at-gridbreak($metro-standardSized){
+	    	padding-top: 100%;
+	    	top:0;
+	    }
+	    
+	}	
+}
+
+
+.nav.even{
+	background: $base-ui-color;
+}
+.nav.odd{
+	background: shade($base-ui-color, 10);
+}
+
+.metro-tile{
+	width: 100%;
+	height: 250px;
+	overflow:hidden;
+	@include at-gridbreak($metro-standardSized){
+		width: 157px;
+		height: 157px;
+	}
+	@include at-gridbreak($metro-largeSized){
+		width: 195px;
+		height: 195px;
+	}
+	
+
+	a.nav{
+		@include font-size(h2-size);	
+		@include at-gridbreak($metro-standardSized){
+				@include responsiveTypeSize(h3-size);
+				
+			}
+	}
+	a.nav, div.pseudo-anchor.nav{
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		color: #fff;
+		
+		i{
+			padding-top: 25px;
+			@include font-size(h1-size);
+			line-height: 1.5em;
+			@include at-gridbreak($metro-standardSized){
+				@include responsiveTypeSize(h2-size);
+				padding-top: 35px;
+			}
+			@include at-gridbreak($metro-largeSized){
+				padding-top: 50px;
+			}	
+			display:block;
+			
+		}
+
+		.nav-overlay{
+			box-sizing: content-box;
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: -8px;
+			left: -8px;
+			border: 8px solid rgba(255,255,255,0.5);
+			opacity: 0;
+			z-index: 5;
+			-webkit-transition: .2s ease-in-out all;
+			-moz-transition: .2s ease-in-out all;
+			-o-transition: .2s ease-in-out all;
+			transition: .2s ease-in-out all;
+			-webkit-transform: scale(0.95);
+			-moz-transform: scale(0.95);
+			-ms-transform: scale(0.95);
+			-o-transform: scale(0.95);
+			transform: scale(0.95);
+		}
+		&:hover{
+			.nav-overlay{
+				opacity: 1;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+	}
+}
+.metro-tile.overlay{
+	overflow:visible;
+}
+div.pseudo-anchor.nav{
+
+	@include font-size(base-size);
+
+}
+
+[class*="metro-tile"] {
+	float: left;
+	min-height: 1px;
+	margin-left: 0;
+}
+
+.metro-tile.void{
+	display:none;
+	@include at-gridbreak($metro-largeSized){
+		display:block;
+	}
+}
+
+h2.brand-logo{
+	color:$font-color;
+	text-align:center;
+	@include responsiveTypeSize(h3-size);
+	margin: 0;
+	span{
+		color: $brand-color;
+	}
+}
+
+h5.brand-logo{
+	margin-top: .25em;
+	text-align:center;
+	color:$font-color;
+	@include responsiveTypeSize(h4-size);
+}
+
+
+div.domain-search{
+	text-align:left;
+}

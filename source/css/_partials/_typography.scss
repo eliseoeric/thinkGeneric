@@ -1,0 +1,69 @@
+/**
+ * Typography
+ */
+
+
+ 
+
+// Type weights
+%t-ultrastrong {
+ font-weight: 900;
+}
+%t-strong {
+ font-weight: 700;
+}
+%t-regular {
+ font-weight: 400;
+}
+%t-light {
+ font-weight: 300;
+}
+%t-ultralight {
+ font-weight: 200;
+}
+
+// Type size variants 
+%t-tiny {
+ @include font-size(h6-size);
+}
+%t-small {
+ @include font-size(h5-size);
+}
+%t-base {
+ @include font-size(base-size);
+}
+%t-medium {
+ @include font-size(h3-size);
+}
+%t-large {
+ @include font-size(h2-size);
+}
+%t-xlarge {
+ @include font-size(h1-size);
+}
+.t-tiny {
+ @include font-size(h6-size);
+}
+.t-small {
+ @include font-size(h5-size);
+}
+.t-base {
+ @include font-size(base-size);
+}
+.t-medium {
+ @include font-size(h3-size);
+}
+.t-large {
+ @include font-size(h2-size);
+}
+.t-xlarge {
+ @include font-size(h1-size);
+}
+
+small {
+ @extend %t-small;
+}
+strong, b {
+ @extend %t-strong;
+}
+

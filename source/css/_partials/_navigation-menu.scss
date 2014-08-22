@@ -1,0 +1,158 @@
+/*------------------------------------*\
+   Navigation-menu.scss
+\*------------------------------------*/
+
+/*
+* .sticky class is applied to the .grid-button when the user scrolls past
+* a certian point.
+*/
+.sticky{
+	position: fixed;
+	top:0;
+	left: 0;
+}
+/*
+* .unstick class is applied to the .grid-button when the page is loaded and when
+* the user scrolls to the top of the page.
+*/
+.unstick{
+	position: relative;
+}
+
+body.index{
+	.menu-control{
+		nav#primary{
+			display:none;
+		}
+	}
+}
+
+.menu-control{
+	
+	nav#primary{
+		max-height: 3.5em;
+		width: 100%;
+		background: $white-opacity;
+		z-index: 2005;
+		transition: .5s all ease-in-out;
+		li{
+			transition: .5s all ease-in-out;
+			top: -18px;
+			position: relative;
+			display: inline-block;
+			padding: .25em .75em;
+
+			a{
+				font-size: 2em;
+				color: $black-opacity;
+				&:hover{
+					color: $base-ui-color;
+				}
+			}
+		}
+		li:first-child{
+			background: $base-ui-color;
+			padding: .25em;
+			top: 0px;
+			margin-right: .5em;
+			img{
+				padding-top: .1em;
+			}
+		}
+		li.nav-label{
+				display: none;
+				@include at-breakpoint($midSized){
+					display: inline-block;
+				}
+				top: -22px;
+				color: $black-opacity;
+				font-size: 1.2em;
+				font-weight: 800;
+				padding-left: 1.5em;
+			
+		}
+	}
+}
+
+.menu-control{
+	nav#primary.closed{
+		background: none;
+		ul{
+			li:not(:first-child){
+				transform: translateX(-650%);
+			}
+		}
+	}
+}
+
+.menu-control{
+	width: 100%;
+	height: 4rem;
+	margin-bottom: 1em;
+	display:block;
+	position: absolute;
+	z-index: 2000;
+	top:0;
+	button{
+		color: $black-opacity;
+		float: right;
+		z-index: 2005;
+	}
+}
+
+.nav-wrap{
+	display:block;
+	float: right;
+}
+
+ul.nav{
+	.dropdown.open{
+		ul.dropdown-menu{
+			display: block;
+		}
+	}
+}
+ul.nav{
+	display:inline-block;
+	padding-top:1em;
+	margin: 0 .5em;
+	position: relative;
+	.dropdown{
+		position: relative;
+		.dropdown-menu{
+
+			position: absolute;
+			min-width: 180px;
+			display: none;
+			z-index: 1000;
+			margin-top: 1em;
+			background:lighten($black, 5);
+			li{
+				padding: .5em;
+				a{
+					color: $font-color;
+					&:hover{
+					color: $base-ui-color;
+				}
+				}
+
+			}
+			.divider{
+				padding:0;
+				margin: 8px 1px;
+				height:1px;
+				overflow:hidden;
+				background-color: $base-ui-color;
+				border-bottom: lighten($base-ui-color, 20);
+			}
+		}
+	}
+
+}
+
+ul.nav.last{
+	margin-right: 4em;
+}
+
+
+

@@ -1,0 +1,20 @@
+
+title: Contact Us
+
+googleMapLink: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.384007506127!2d-82.63549990000001!3d27.76713965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19baa3d07e5%3A0x3f1146480c5f776!2s199+4th+Ave+S!5e0!3m2!1sen!2sus!4v1392746535139
+
+inputs:
+  - value: Full Name
+    type: text
+    id: fullName
+  - value: Email Address
+    type: email
+    id: email
+  - value: Phone Number
+    type: text
+    id: phone
+  - value: Website URL
+    type: text
+    id: website
+
+

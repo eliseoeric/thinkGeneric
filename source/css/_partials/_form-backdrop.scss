@@ -1,0 +1,65 @@
+/*------------------------------------*\
+   Form Backdrop
+\*------------------------------------*/
+.banner{
+	.logo{
+		@include span-columns(1,4);
+		padding: 2em 0 4em 0;
+	}
+}
+.banner.form-backdrop{
+	background: $black;
+
+	.page-header{
+		padding-bottom: 6em;
+		@include span-columns(4,5);
+		.styled_title h1,h2,h3,h4,h5{
+			color: $background-color;
+			small{
+				font-size: .65em;
+			}
+		}
+	}
+}
+
+.form-front{
+	border-top: 6px solid $base-ui-color;
+	margin-top: -95px;
+	padding: 2em 4em;
+	background: $background-color;
+}
+
+
+#pwstrengthbox{
+	width: 50%;
+	margin: 2em 0;
+	padding: 1em;
+}
+.strong.moderate.weak{
+	color: #fff;
+	background: $alert-error;
+	border: 1px solid $alert-error-border;
+}
+
+.strong.moderate{
+	color: #fff;
+	background: $alert-color;
+	border: 1px solid $alert-border;
+}
+
+.strong{
+	color: #fff;
+	background: $alert-success;
+	border: 1px solid $alert-success-border;
+}
+
+hr.divide{
+	width: 100%;
+	margin: 3em 0 2em 0;
+	height: 1px;
+	background: rgba(43, 52, 59, 0.05);
+	&:after{
+		display: none;
+	}
+}
+

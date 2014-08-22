@@ -1,0 +1,29 @@
+
+title: Our Services
+
+services:
+  - title: "Web Design & Development"
+    image: monitor.png
+    content: "Look professional online.  Every site we build is hand coded, artfully crafted and unqiue. We labor over every line of code, every pixel to bring you a superior product."
+  - title: Web Hosting
+    image: browser.png
+    content: "Feel safe with your data.  With data centers across the country we offer secure, reliable and fast web hosting solutions."
+  - title: Online Marketing and SEO
+    image: chat.png
+    content: "Capture you audience.  We build websites that help turn viewers into customers.  We work with our clients to reach more potential customers and eliminate competition."
+  - title: Mobile Development
+    image: mobile.png
+    content: "Be accessiable on the go.  Every website we develop is built mobile first, however sometimes that is not enough. We offer custom mobile application solutions for any customer."
+
+advServices:
+  - title: Social Media Management
+    image: fa-sitemap
+    content: "Our social media team can setup, manage and maintain each of your social networking pages, allowing you to reach more potential customers than before."
+  - title: eCommerce Development
+    image: fa-cogs
+    content: "We host, develop and maintain a number of eCommerce websites. We offer store administration for Magento, Shopify, WooCommerce, Joomla and many more."
+  - title: Google Analytics
+    image: fa-tachometer
+    content: "We give you the tools to monitor every aspect of your website.  Know how your viewers use your site, and how to get the most out of that viewership."
+
+

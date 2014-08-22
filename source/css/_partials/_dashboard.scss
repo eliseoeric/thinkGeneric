@@ -1,0 +1,111 @@
+/*------------------------------------*\
+   Dashboard Section
+\*------------------------------------*/
+section.loggedin{
+	background: shade($background-color, 5);
+}
+
+.nav.nav-tabs{
+	padding-bottom: 2em;
+	li.active{
+			a{
+				color: $base-ui-color;
+				&:hover{
+					color: $base-ui-color;
+				}
+			}
+		}
+	li{
+		display: inline-block;
+		padding: 0 1em;
+		font-weight: 800;
+
+		a{
+			color: shade($font-color, 35);
+			&:hover{
+				color: shade($font-color, 45); 
+			} 
+		}
+	}
+}
+
+.dashboard-panel{
+	padding: 1em;
+	background: #fff;
+	border-radius: 5px;
+	border-bottom: 2px solid shade($background-color, 10);
+	margin-bottom: 1.5em;
+
+	hr{
+		background: rgba(43, 52, 59, 0.10);
+	}
+
+	.styled_title{
+		h1,h2,h3,h4,h5,h6{
+			small{
+				font-size: .65em;
+			}
+		}
+	}
+
+	a.btn{
+		padding: .65em;
+		border-radius: 5px;
+		@extend .btn-primary;
+	}
+
+	a.btn-inverse{
+		background:none;
+		color: $base-ui-color;
+		&:hover{
+			background:none;
+		}
+	}
+
+	select{
+		background: shade($font-color, 5);
+		color: shade($font-color, 25); 
+	}
+}
+
+table.table{
+	width: 100%;
+	font-size: .85em;
+	thead{
+		border-bottom: solid 1px shade($background-color, 10);
+	}
+	th{
+		padding: .5em 1em;
+		input[type="checkbox"]{
+			padding: 0;
+			margin-bottom: 0!important;
+		}
+	}
+
+	td{
+		padding: 0 5px 0 5px;
+		text-align: center;
+		img{
+			display: inline;
+			width: 16px;
+		}
+	}
+}
+
+span.badge{
+	font-size: .85em;
+	color: $font-color;
+	padding: 0.05em .75em;
+	border-radius: 14px;
+	&:after{
+		content: "";
+	}
+}
+
+.badge.badge-info{
+	background-color: $base-ui-color;
+}
+
+.badge.badge-important{
+	background-color: $alert-error;
+}

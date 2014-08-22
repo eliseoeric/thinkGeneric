@@ -1,0 +1,23 @@
+---
+title: About Us
+
+id: about-us
+---
+
+<div id="<%= current_page.data.id %>" class="about-page s-page slidePageBackLeft">
+    <section role="<%= current_page.data.id %>">
+        <div class="container" id="sb-scroller">
+            <div class="section-header">
+                <h1 class="responsive-type"><%= current_page.data.title %></h1>
+                <hr>
+            </div>
+            <div class="content-yield one-half">
+                <div class="text-pad-top"><%= partial "/layouts/partials/content/content_about" %></div>
+            </div>
+            <div class="showcase-img one-half-last">
+                <div><%= image_tag 'ipad3.png' %></div>
+            </div>
+        </div>
+        <%= partial "/layouts/partials/content/content_about_process" %>
+    </section>
+</div>

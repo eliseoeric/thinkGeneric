@@ -1,0 +1,104 @@
+@import "compass/layout/sticky-footer";
+@include sticky-footer(288px, '#root', '#root-footer', '#footer');
+
+footer{
+	position: relative;
+	width: 100%;
+	background: $black;
+	p,h1,h2,h3,h4,h5,h6,li{
+		color: $font-color;
+	}
+	// padding-top: 3em;
+	p{
+		@include responsiveTypeSize(base-size);
+	}	
+}
+
+
+
+#js-footer{
+	background: $black;
+	padding-top: 3em;
+}
+.footer-section{
+	@include span-columns(1,1);
+	@include at-breakpoint($midSized){
+		@include span-columns(1,4);
+		@include nth-omega(4n);
+	}
+}
+
+section[role="final-thoughts"]{
+	width: 100%;
+	padding: 1em 0 0 0;
+	background: $background-color;
+	h6{
+		color: $black;
+	}
+	@include at-breakpoint($midSized){
+		background: shade($black, 15);
+		// padding-bottom: 1em;
+		h6{
+			font-family: $base-font-family;
+			color: $font-color;
+		}
+	}
+
+	aside{
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		@include at-breakpoint($midSized){
+			width: 49%;
+		}
+	}
+}
+
+
+
+aside.quick-links{
+	background: shade($base-ui-color, 10);
+
+	@include at-breakpoint($midSized){
+		background: shade($black, 15);
+		
+	}
+	ul{
+		padding: .5em 0;
+		li{
+			@include responsiveTypeSize(h5-size);
+			a {color: $font-color;&:hover{color:$brand-color}}
+			display: inline;
+			padding: .5em;
+		}
+	}
+}
+
+.social-links{
+	li{
+		display: inline-block;
+		@include font-size(h3-size);
+		padding: 0 .25em;
+		a{
+			transition: all .25s ease-in;
+		}
+		a:hover{
+			color: $font-color;
+		}
+	}
+}
+
+.close-button{
+	display:blcok;
+	position: absolute;
+	margin-bottom: .75em;
+	margin-right: 3.5em;
+	bottom: 0;
+	right:0;
+}
+#js-footer-close{
+	
+	i{
+		@include responsiveTypeSize(h2-size);
+	}
+}

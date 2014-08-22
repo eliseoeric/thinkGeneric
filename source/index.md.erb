@@ -1,0 +1,162 @@
+---
+
+title: ThinkGeneric
+
+first_link: /portfolio
+first_link_title: Portfolio
+first_link_icon: <i class="fa fa-desktop"></i>
+
+second_link: /about
+second_link_title: About
+second_link_icon: <i class="fa fa-info-circle"></i>
+
+third_link: /services
+thrird_link_title: services
+third_link_icon: <i class="fa fa-code"></i>
+
+fourth_link: http://portal.thinkgeneric.com
+fourth_link_title: Hosting
+fourth_link_icon: <i class="fa fa-cloud-upload"></i>           
+
+fifth_link: /contact
+fifth_link_title: Contact
+fifth_link_icon: <i class="fa fa-comments-o"></i>
+
+---
+<div class="frontpage-container">
+    <section role="frontpage" class="dashboard fadeOutBack">
+        <!-- frontpage-grid -->
+        <div id="metro-container" class="metro-container">
+
+            <div class="metro-row">
+                <div id="logo" class="metro-tile logo">
+                   <%= image_tag "thinkgeneric_logo.svg" %>
+                    
+                </div>
+            </div>
+
+            <div class="metro-row">
+                <div class="metro-tile w4 void">
+                    <div class="metro-tile-content slogan">
+                        <h2 class="tagline">Website Design and Application Development</h2>
+                        <p>We are a St Petersburg based interactive web design firm specializing in functional, yet concise design.  Using online marketing, web and graphic design we will work with you to convert your visitors into clients.</p>
+                    </div>
+                </div>
+                <div class="metro-tile mobile">
+                    <div class="metro-tile-content img">
+                        <div class="apsect-box">
+                        <%= image_tag "header.png" %>
+                        </div>
+                    </div>
+                </div>
+                <div class="metro-tile mobile">
+                    <div class="metro-tile-content">
+                        <h1 class="tagline hp-center">Website Design and Application Development</h1>
+                    </div>
+                </div>
+                <div class="metro-tile mobile">
+                    <div class="metro-tile-content">
+                        <p class="tagline hp-center">We are a St Petersburg based interactive web design firm specializing in functional, yet concise design.  Using online marketing, web and graphic design we will work with you to convert your visitors into clients.</p>
+                    </div>
+                </div>
+                <div class="metro-tile overlay">
+
+                    <a href="<%=current_page.data.first_link %>" class="nav even"><div class="nav-overlay"></div><%=current_page.data.first_link_icon %><%=current_page.data.first_link_title%></a>
+                </div>
+
+                <div class="metro-tile ">
+                    <div class="metro-tile-content img">
+                        <div class="apsect-box">
+                       
+                         <%= image_tag "photoshop_800.png" %>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end row -->
+
+
+            <div class="metro-row">
+                <div class="metro-tile overlay">
+
+                    <a href="<%=current_page.data.second_link%>" class="nav odd"><div class="nav-overlay"></div><%=current_page.data.second_link_icon%><%=current_page.data.second_link_title%></a>
+                </div>
+
+                <div class="metro-tile overlay">
+
+                    <a href="<%=current_page.data.third_link%>" class="nav even"><div class="nav-overlay"></div><%=current_page.data.third_link_icon%><%=current_page.data.thrird_link_title%></a>
+                </div>
+
+                <div class="metro-tile">
+                    <div class="metro-tile-content img">
+                        <div class="apsect-box">
+                        <%= image_tag "coding_800.png" %>
+                        </div>                    
+                    </div>
+                </div>
+
+                <div class="metro-tile">
+                    <div class="metro-tile-content img">
+                        <div class="apsect-box">
+                        <%= image_tag "top_view_500.png" %>
+                        </div>                   
+                    </div>
+                </div>
+
+                <div class="metro-tile overlay">
+
+                    <a href="<%=current_page.data.fourth_link%>" class="nav odd"><div class="nav-overlay"></div><%=current_page.data.fourth_link_icon%><%=current_page.data.fourth_link_title%></a>
+                </div>
+
+                <div class="metro-tile">
+                    <div class="metro-tile-content img">
+                        <div class="apsect-box">
+                        <%= image_tag "workspace_800.png" %>
+                        </div>                    
+                    </div>
+                </div>
+            </div> <!-- end row -->
+
+
+            <div class="metro-row">
+                <div class="metro-tile void">
+                    <!--void tile-->
+                </div>
+
+            <div class="metro-tile">
+                <div class="metro-tile-content img">
+                    <div class="apsect-box">
+                    <%= image_tag "ipad_500.png" %>
+                    </div>                   
+                </div>
+            </div>
+
+            <div class="metro-tile overlay">
+
+                <a href="<%=current_page.data.fifth_link%>" class="nav even"><div class="nav-overlay"></div><%=current_page.data.fifth_link_icon%><%=current_page.data.fifth_link_title%></a>
+            </div>
+            
+            <div class="metro-tile void">
+                <!--void tile -->
+            </div>
+
+            <div class="metro-tile void">
+                <!--void tile -->
+            </div>
+
+            <div class="metro-tile">
+                <div class="metro-tile-content img">
+                    <div class="apsect-box">
+                    <%= image_tag "conference_500.png" %>
+                    </div>                     
+                </div>
+            </div>
+            </div> <!--end row-->
+        </div>
+        <!-- /frontpage-grid -->    
+    </section>
+</div>
+
+
+
+
+

@@ -1,0 +1,82 @@
+---
+title: Our Services
+
+id: our-services
+---
+<div id="<%= current_page.data.id %>" class="services s-page slidePageBackLeft">
+    <div>
+        <section  role="<%= current_page.data.id %>">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="responsive-type"><%= current_page.data.title %></h1>
+                    <hr>
+                </div>
+
+            <div class="content-yield two-third">
+                <%= partial "/layouts/partials/content/content_services" %>
+                  
+            </div>
+
+            <div class="showcase-img one-third-last">
+                <%=image_tag 'tablet-map.png' , :class => "mobile-hide" %>
+            </div>
+
+            <div clas="row">
+                <div class="call-to-action">
+                    <div class="yield">
+                        <h3 class="call">Ready to get started?</h3>
+                        <p>Think Generic is accepting small projects at the moment. Let us help you stand out.</p>
+                    </div>
+                    <div class="action">
+                        <div class="action-btn-wrap">
+                            <%= link_to 'Request a Quote', 'contact.html', :class=>"btn-anchor btn-orange" %>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-img text-pad-bottom">
+                <%=image_tag 'devices2_flat.png'%>
+            </div>
+            <div class="content-yield text-pad-top">
+                <%=partial "/layouts/partials/content/content_services_aux" %>
+            </div>
+            </div>
+        </section>
+
+ <section role="services-advanced" class="banner blue">
+            <div class="container">
+                <% data.pages.services.content.advServices.each do |i|%>
+                    <div class="info-block-third hp-center">
+                        <div class="icon-circle"><i class="fa <%= i.image %>"></i></div>
+                        <h3><%= i.title %></h3>
+                        <p><%= i.content %></p>
+                    </div>
+                <% end %>
+            </div>
+        </section>
+        <section role="<%= current_page.data.id %>">
+            <div class="container">
+                <section class="info-block-group">
+                    <% data.pages.services.content.services.each do |i|%>
+                        <div class="info-block-half">
+                            <div class="service-img text-pad-top">
+                                <%=image_tag(i[:image], alt: i[:title])%>
+                            </div>
+                            <div class="service-text">
+                                <h3><%= i.title %></h3>
+                                <p><%= i.content %></p>
+                            </div>
+                        </div>
+                    <% end %>
+                </section>
+                <div class="content-yield two-third">
+                    <%= partial "/layouts/partials/content/content_services_seo" %>
+                </div>
+                 <div class="showcase-img one-third-last">
+                    <%=image_tag 'seo_device.png' %>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

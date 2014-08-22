@@ -1,0 +1,158 @@
+/*------------------------------------*\
+    navigation_icon
+\*------------------------------------*/
+/**
+ * Below are the styles that control the navigation button
+ * indicator at the top of the page
+ *	
+ */
+ button{
+	display: inline-block;
+	margin: 0;
+
+	border: none;
+	background: none;
+
+	span{
+		display:block;		
+	}
+}
+ $button-size: 3.5rem;
+ $transition: .3s; //increase this to see the transformations in slow-motion
+
+ .lines-button{
+ 	display: inline-block;
+ 	padding: $button-size/2 $button-size/4;
+ 	transition: .3s;
+ 	cursor: pointer;
+ 	user-select: none; // what does this do? Look it up
+ 	border-radius: $button-size/7;
+
+ 	&:hover{
+ 		opacity: 1;
+ 	}
+
+ 	&:active{
+ 		transition: 0;
+ 		background: rgba(0,0,0,.1);
+ 	}
+ }
+
+ @mixin line{
+ 	display:inline-block;
+ 	width: $button-size;
+ 	height: $button-size/7;
+ 	background: $font-color;
+ 	border-radius: $button-size/14;
+ 	transition: $transition;
+ }
+
+//we are using the mixin in the .lines element and its absolutely positioned pseudo elements to create the navicon
+
+.lines{
+	//create middle line
+	@include line;
+	position: relative;
+
+	/*create the upper and lower lines a pseudo-elements of the middle line*/
+	&:before,&:after{
+		@include line;
+		position: absolute;
+		left: 0;
+		content: '';
+		transform-origin: $button-size/14 center;
+	}
+
+	&:before{
+		top: $button-size/4;
+	}
+	&:after{
+		top: -$button-size/4;
+	}
+}
+
+.lines-button:hover{
+	opacity:1;
+
+	.lines{
+		&:before{
+			top: $button-size/3.5;
+		}
+		&:after{
+			top: -$button-size/3.5;
+		}
+	}
+}
+
+.lines-button.arrow.close{
+	@include vendor(transform, scale3d(.8,.8,.8));
+}
+
+.lines-button.arrow.close .lines{
+	&:before,
+	&:after{
+		top: 0;
+		width: $button-size/1.8;
+	}
+
+	&:before{
+		@include vendor(transform, rotate3d(0,0,1, 40deg));
+	}
+	&:after{
+		@include vendor(transform, rotate3d(0,0,1, -40deg));
+	}
+}
+/**
+ * Below are the styles that control the navigation button
+ * indicator at the top of the page
+ *	Specifically the grid to x icon
+ */
+
+ $base :.8rem;
+ $space: $base/4;
+ 
+
+ .grid-button{
+ 	padding: $base*2;
+ 	cursor: pointer;
+ 	user-select: none;
+ 	&:hover{
+ 		.grid{
+ 			background: $black;
+ 			color: $black;
+ 		}
+ 		
+ 	}
+ }
+
+ .grid-button .grid{
+ 	width: $base;
+ 	height: $base;
+ 	background: $black-opacity;
+ 	color: $black-opacity;
+ 	transition: $transition;
+
+ }
+
+ .grid-button.rearrange .grid{
+ 	@include vendor(box-shadow,
+ 		-($base+$space) 0 -($base+$space), 0 0 -($base+$space), ($base+$space) (-($base + $space)),
+      -($base+$space) 0,
+      $base+$space 0,
+      -($base+$space) ($base + $space),
+      0 ($base+$space),
+      ($base+$space) ($base + $space));
+ }
+
+ .grid-button.rearrange.close .grid{
+ 	@include vendor(box-shadow,0 0 -$base,
+        0 0 -$base*2,
+        $base 0,
+        -$base*2 0,
+        $base*2 0,
+        -$base 0,
+        0 $base*2,
+        0 $base);
+
+        @include vendor(transform, rotate3d(0,0,1,-45deg) scale3d(.8,.8,.8));
+ }

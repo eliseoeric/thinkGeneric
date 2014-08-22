@@ -1,0 +1,50 @@
+---
+title: Contact Us
+
+id: contact-us
+
+---
+
+<div id="contact" class="contact s-page slidePageBackLeft">
+    <section  role="contact">
+        <div class="section-header">
+            <h1><%= data.pages.contact.content.title %></h1>
+            <hr>
+        </div>
+        <div class="map-object">
+            <iframe src="<%= data.pages.contact.content.googleMapLink %>" width="100%" height="300" frameborder="0" style="border:0"></iframe>
+        </div>
+        <div class="container">
+            <div class="content-yield two-third">
+                <%= partial "/layouts/partials/content/content_contact" %>
+            </div>
+            <div class="content-yield one-third-last">
+                <h2>Contact Info</h2>
+                <ul class="contact-info">
+                    <li><strong><i class="fa fa-phone"></i>Phone: </strong><a href="tel:727-888-3875">727-888-3875</a></li>
+                    <li><strong><i class="fa fa-envelope-o"></i>Email: </strong><a href="mailto:info@thinkgeneric.com">info@thinkgeneric.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact-form container">
+            <div id="js-form-messages"></div>
+            <form id="js-contact" method="post" action="../lib/mailer.php">
+                <div class="row">
+                <% data.pages.contact.content.inputs.each do |i| %>
+                <div class="form-element">
+                    <label for="<%=i.id%>"><%=i.value%></label>
+                    <input id="<%=i.id%>" type="<%= i.type %>" value="" name="<%=i.id%>" onfocus="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==this.defaultValue){this.value=''}" required >
+                </div>
+                <% end %>
+                </div>
+                <div class="row">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" onfocus="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==this.defaultValue){this.value=''}" required>Your message... </textarea>
+                </div>
+                <div class="form-element">
+                    <input class="btn-blue" type="submit" value="Submit"/>
+                </div>
+            </form>
+        </div>
+    </section> 
+</div>

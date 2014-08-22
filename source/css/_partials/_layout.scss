@@ -1,0 +1,273 @@
+/*------------------------------------*\
+   Layout.scss
+\*------------------------------------*/
+// This contains the basic styles for a simple page within
+// the think generic website.
+
+.section-header{
+	padding-top:2em;
+	text-align:center;
+	@include span-columns(1 omega,1);
+}
+
+.content-yield{
+	h3{
+		@include responsiveTypeSize(h3-size);
+	}
+	@include at-breakpoint($midSized){
+		padding-bottom: 3em;
+	}
+}
+
+.content-bottom{
+	margin-bottom: 2em;
+}
+
+section.banner.blue{
+	background: $base-ui-color;
+	// color: $font-color;
+}
+
+section.banner.dark-blue{
+	background: shade($base-ui-color, 15);
+	// color: $font-color;
+}
+
+section[role="about-us"], section[role="our-services"], section[role="our-portfolio"], section[role="contact"], section[role="portal"], section[role="general"]{
+	background: $background-color;
+}
+
+/*------------------------------------*\
+   Portal Section
+\*------------------------------------*/
+section[role="portal"]{
+	max-height: 8em;
+}
+
+.hero-wrap{
+	min-height: 15em;
+}
+
+/*------------------------------------*\
+   Process Section
+\*------------------------------------*/
+
+section[role="process"]{
+	margin-top: -125px;
+	padding-bottom: 1em;
+	padding-top: 125px;
+	color: #2b343b;
+	background: #51acc7;
+
+	.process-block{
+		@include span-columns(1, 1);
+		@include at-breakpoint($midSized){
+			@include span-columns(8,16);
+			// @include nth-omega(2n);
+		}
+		@include at-breakpoint($largeSized){
+			@include span-columns(4,16);
+			@include nth-omega(4n);
+		}
+		margin-bottom: 2em;
+	 	text-align: center;
+ 		background: lighten($base-ui-color,25);
+ 		border-bottom: 5px solid $black;
+		@include vendor (transition, all ease-in-out .35s);
+ 		p{
+ 			text-align: left;
+ 			padding: 0 1em;
+ 		}
+ 		
+ 		
+
+ 		svg{
+ 			path{
+ 				@include vendor (transition, all ease-in-out .35s);
+ 			}
+ 			margin-top: 1em;
+
+ 		}
+
+ 		&:hover{
+ 			background: lighten($base-ui-color,45);
+ 			border-bottom: 5px solid $brand-color;
+ 			svg{
+ 				path{fill: $brand-color;}
+ 			}
+ 		}
+
+ 	}
+}
+
+
+/*------------------------------------*\
+   Services Section
+\*------------------------------------*/
+
+.info-block-group{
+	@include span-columns(1,1);
+	padding-top: 2.5em;
+	display: block;
+}
+
+.service-img{
+	padding-top: 2.5em;
+	@include span-columns(1,4);
+}
+
+.service-text{
+	@include span-columns(3 omega,4);
+}
+
+.info-block-half{
+	@include span-columns(1,1);
+	@include at-breakpoint($midSized){
+		@include span-columns(1,2);
+		@include nth-omega(2n);
+		padding-bottom: 2em;
+	}
+}
+
+section[role="services-advanced"]{
+	.info-block-third{
+		@include span-columns(1,1);
+		@include at-breakpoint($midSized){
+			@include span-columns(1,3);
+			@include nth-omega(3n);
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+	}
+
+	.icon-circle{
+		color: $font-color;
+		font-size:$giga-size;
+		line-height: 1.5em;
+	}
+}
+
+
+/*------------------------------------*\
+   Portfolio Section
+\*------------------------------------*/
+.hero-text{
+	@include responsiveTypeSize(h2-size);
+	padding:1em .25em 1em .25em;
+	text-align:center;
+}
+
+.mock-overlay{
+	position: relative;
+	z-index: 10;
+	top: -100px;
+	padding: 1em 1.5em;
+	background-color: shade($black-opacity, 30);
+	h3{
+		color: $background-color;
+	}
+}
+
+section[role="previous-work"]{
+	background-color: $background-color;
+}
+
+.hero-text.negative{
+	color: $font-color;
+}
+
+
+.port-mock{
+
+	@include span-columns(1,1);
+	margin-bottom: -100px;
+	@include at-breakpoint($midSized){
+		@include span-columns(9,12);
+		margin-bottom:0;
+	}
+}
+
+.port-details{
+	display:none;
+	@include at-breakpoint($midSized){
+		display: block;
+		@include span-columns(3 omega,12);
+	}
+	
+}
+
+.port-banner{
+	background: $base-ui-color;
+	padding: 2em 0 0 0;
+	h2{
+		// color:$base-ui-color;
+	}
+}
+
+// .port-banner.dark{
+// 	background: $font-color;
+// 	color: $black;
+// 	padding: 2em 0;
+// }
+
+// .port-scription, .port-details{
+// 	padding: 2em 0 0 0;
+// 	img{
+// 		padding: 1em 2em;
+// 	}
+// }
+
+/*------------------------------------*\
+   Call to Action
+\*------------------------------------*/
+
+.call-to-action{
+	@include span-columns(1,1);
+	background: shade($font-color, 5);
+	border-left: 6px solid $base-ui-color;
+	margin-bottom: 2em;
+	padding-left: 1em;
+
+	.call{
+	  margin-top: 1em;
+	}
+
+	.yield{
+		@include span-columns(1,1);
+		@include at-breakpoint($largeSized){
+			@include span-columns(3,5);
+		}
+	}
+	.action{
+		@include span-columns(1,1);
+		@include at-breakpoint($largeSized){
+			padding-top: 3em;
+			@include span-columns(2 omega,5);
+		}
+		p{
+			padding-top: .5em;
+			float:right;
+		}
+
+		.action-btn-wrap{
+			.btn-anchor{
+				width:100%;
+				text-align: center;
+				@include font-size(h3-size);
+				line-height: 1em;
+			}
+			@include span-columns(1,1);
+			padding-right: 1.5em;
+			padding-bottom: 2em;
+			@include at-breakpoint($largeSized){
+				@include span-columns(6 omega,12);
+				.btn-anchor{
+					@include font-size(base-size);
+				}
+			}
+
+
+			
+		}
+	}
+}
